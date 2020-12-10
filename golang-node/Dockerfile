@@ -28,7 +28,10 @@ RUN wget https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz && \
 
 # nodejs install
 RUN curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh && \
-	bash nodesource_setup.sh && \
+	bash nodesource_setup.sh;
+
+RUN	apt-get update && \
+	apt-get -y upgrade && \
 	apt-get -y install nodejs && \
 	apt-get -y install build-essential;
 
