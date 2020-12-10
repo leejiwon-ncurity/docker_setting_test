@@ -61,6 +61,10 @@ Golang은 내가 프로젝트를 만들 폴더를 지정하지 못하고 go자�
 go PATH설정을 해준다
 ```bash
 # export PATH=$PATH:/usr/local/go/bin
+
+둘중에 뭐가 맞는걸까 뭘까? 일단 해놓긴하겠다.
+# export GOPATH=/usr/local/go
+# export GOROOT=/usr/local/go
 ```
 
 
@@ -102,6 +106,8 @@ ubuntu.golang                                            go                  f0b
 # bash nodesource_setup.sh
 ```
 
+직전에 apt-get update와 upgrade를 해준다.
+
 
 ubuntu 저장소에 있는 nodejs를 설치해준다
 그리고 node 빌드오류를 방지하기위한 build-essential도 설치해준다.
@@ -138,3 +144,4 @@ go.node                                                  gonode              cee
 ubuntu.golang                                            go                  f0b3e278932c        About an hour ago    597MB
 ```
 
+환경변수는 왜 dockerfile에 잘 안담길까? 다시 찬찬히 살펴봐야겠다.
